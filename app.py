@@ -31,7 +31,7 @@ def deepseek_chat(messages: list) -> str:
 
         client = Groq(api_key=api_key)
         response = client.chat.completions.create(
-            model="deepseek-r1-distill-qwen-32b",
+            model="qwen-2.5-coder-32b",
             messages=[{"role": "system", "content": system_prompt}, *messages],
             stream=False
         )
